@@ -1,6 +1,6 @@
 # Home Assistant (dvdcmrn)
 
-One repository for David Cameron's Home Assistant add-ons, HACS integrations, themes, and related tooling.
+One repository for dvdcmrn's Home Assistant add-ons, HACS integrations, themes, and related tooling.
 
 - **Repository URL (after rename):** https://github.com/dvdcmrn/homeassistant
 - **Current URL:** https://github.com/dvdcmrn/homeassistant-addons

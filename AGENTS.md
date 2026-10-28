@@ -2,23 +2,14 @@
 
 This repository has **no local AI toolkit** (no `.cursor/` agent trees, no `.claude/`, no `CLAUDE.md`).
 
-Use the Cursor MCP knowledge tools (`valhal-knowledge-*`) and **`gungnir`** / **`valhal-odin`** for homelab ops (same GungnirMCP gateway).
+Homelab knowledge and ops tools are provided through MCP servers configured in the Cursor project, not in this repo. Host names, addresses and credentials are never stored here.
 
-## Knowledge (MCP)
+## Repository rules
 
-| Tool | Purpose |
-|------|---------|
-| `valhal-knowledge-search_kbase` | Search |
-| `valhal-knowledge-read_kbase_doc` | Read a doc |
-| `valhal-knowledge-write_kbase_doc` | Write/update a doc |
-| `valhal-knowledge-kbase_manifest` | List bases / files |
-
-Useful paths inside the knowledge base:
-
-- `homelab/` — LAN hosts and network
-- `mjolnir/project.md` — workstation defaults
-- `projects/<repo>/project.md` — per-repo ship/deploy notes
+- Run `gitleaks git --log-opts="<range>"` (or `pre-commit run --all-files`) before every push and before opening a PR. A finding blocks the push.
+- Commit author email must be the GitHub noreply address.
+- No personal info (real names, emails, host names, IPs, usernames, passwords) in code, docs or tests. Use placeholders such as `example.com` or `192.0.2.10`.
 
 ## Skills / rules
 
-Workflow skills live in Cursor via GungnirMCP Library export (`~/.cursor/skills`), not in this repo.
+Workflow skills live in Cursor (`~/.cursor/skills`), not in this repo.
