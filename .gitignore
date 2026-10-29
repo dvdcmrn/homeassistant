@@ -115,3 +115,10 @@ celerybeat.pid
 .mypy_cache/
 .dmypy.json
 dmypy.json
+
+# AI agent files (instructions live in Cursor Project rules, not in the repo)
+AGENTS.md
+CLAUDE.md
+.cursor/
+.claude/
+.kiro/
