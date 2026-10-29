@@ -6,7 +6,19 @@ This project has a single developer and works directly on `main` on the self-hos
 
 - Commit and push straight to `main` on the primary. No branches, no pull requests and no extra tags.
 - CI on the primary builds, tests and scans every push to `main`.
-- Only after CI passes is `main` pushed on to GitHub. GitHub is a read-only mirror; nothing is committed or merged there.
+- Only after CI passes is `main` pushed on to GitHub `main`, with no secrets, keys or personal info. GitHub is a read-only mirror; nothing is committed or merged there.
+- Straight after that, the build is deployed so the latest version can be tested, and the owner is told the deployment was updated.
+
+## Deploy
+
+The deploy target is the Home Assistant OS configuration, not a container.
+
+1. Take a backup of the Home Assistant configuration first.
+2. Sync the changed files from `main` to the Home Assistant config.
+3. Reload only the affected integrations (for example automations, templates or the custom integration) through the Home Assistant API.
+4. A full Home Assistant restart is never done automatically; it needs the owner's explicit OK each time.
+
+Docs-only changes are not deployed.
 
 ## Before you push
 
